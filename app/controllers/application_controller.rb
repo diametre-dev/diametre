@@ -5,15 +5,15 @@ class ApplicationController < ActionController::Base
 
   before_action :authenticate_user!, unless: :pages_controller?
 
-  after_action :verify_authorized, except:  :index, unless: :devise_or_pages_controller?
-  after_action :verify_policy_scoped, only: :index, unless: :devise_or_pages_controller?
+  after_action :verify_authorized, except:  :index, unless: :devise_or_pages_controller_or_admin?
+  after_action :verify_policy_scoped, only: :index, unless: :devise_or_pages_controller_or_admin?
 
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
   private
 
-  def devise_or_pages_controller?
-    devise_controller? || pages_controller?
+  def devise_or_pages_controller_or_admin?
+    devise_controller? || pages_controller? || params[:controller] =~ /^admin/
   end
 
   def pages_controller?
