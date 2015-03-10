@@ -2,7 +2,7 @@ class ApplicationPolicy
   attr_reader :user, :record
 
   def initialize(user, record)
-    @user = user
+    @user = user.admin
     @record = record
   end
 
@@ -23,7 +23,7 @@ class ApplicationPolicy
   end
 
   def update?
-    false
+    record.user == user
   end
 
   def edit?
@@ -47,7 +47,7 @@ class ApplicationPolicy
     end
 
     def resolve
-      scope
+      scope.all
     end
   end
 end
