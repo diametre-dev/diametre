@@ -39,6 +39,7 @@ $navbar-profile-border-width: 2px;
 /* -------------------------------------
  * SCSS code
  * ------------------------------------- */
+
 .navbar-wagon {
   background: $navbar-bg;
   font-family: $navbar-font-family;
@@ -50,8 +51,9 @@ $navbar-profile-border-width: 2px;
   padding-left: $navbar-horizontal-padding;
   padding-right: $navbar-horizontal-padding;
   border-bottom: $navbar-border-bottom-width solid $navbar-border-bottom-color;
-  min-height: 0;
+  min-height: 80px;
   transition: background 0.4s ease;
+
 
   .navbar-nav > li > a,
   .navbar-nav > .open > a,
@@ -152,3 +154,21 @@ $navbar-profile-border-width: 2px;
     }
   }
 }
+
+/* -------------------------------------
+ * my work
+ * ------------------------------------- */
+
+navbar-right {
+  right: 100px;
+}
+
+ul.nav.navbar-nav.navbar-right {
+  padding: 25px;
+  li {
+    margin: 5px;
+    align: center;
+  }
+}
+
+
