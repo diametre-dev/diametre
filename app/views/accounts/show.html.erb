@@ -1,0 +1,23 @@
+<h1>Dashboard</h1>
+
+<h2>Your last creations</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="text-center">
+        <h1>Posts</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <% current_user.posts.each do |post| %>
+      <div class="col-xs-12 col-sm-3">
+        <div class="mini-card">
+        <h3><%= post.title %></h2>
+        <%= post.subtitle %> <br>
+        <%= image_tag post.picture.url(:thumb), class: "avatar"%>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
