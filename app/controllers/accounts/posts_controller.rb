@@ -7,6 +7,7 @@ class Accounts::PostsController < ApplicationController
   def index
     # dans la view current_user.posts.each
     # authorize Post
+    @posts = Post.all
   end
 
   def show
