@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
 
+
   # before_action :authenticate_user!, unless: :pages_controller_or_posts_controller?
   # faire un only plutôt qu'un unless, et faire un only sur le post controller du account controller
 
