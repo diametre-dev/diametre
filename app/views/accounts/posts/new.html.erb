@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="text-center">
+    <h2>Create a new post</h2>
+  </div>
+  <div class="col-sm-6 col-sm-offset-3">
+    <div class="box-form">
+    <%= simple_form_for(@post, html: {multipart: true}, url: account_posts_path) do |f| %>
+      <%# @post.errors.full_messages %>
+      <%= f.error_notification %>
+
+      <%#= f.association :tag?, as: :select, label_method: :name, label: false, placeholder: "Type the name of the tag" %> <!-- PEUT SERVIR POUR LES TAGS -->
+      <%= f.input :title %>
+      <%= f.input :subtitle %>
+      <%= f.input :description %>
+      <%= f.input :picture %> <!-- TODO Add a drag and drop ??? -->
+      <%= f.input :author %>
+      <%= f.button :submit, class: "submit-btn" %>
+    <% end %>
+    </div>
+  </div>
+</div>
+

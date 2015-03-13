@@ -19,7 +19,7 @@
 
   <h1>Our Team</h1>
   <div class="team-card">
-    <% @members.all.each do |member| %>
+    <% Member.all.each do |member| %>
       <%= image_tag member.picture.url(:medium) %>
       <%= member.name %>, <%= member.job %>
       <%= member.description %>
