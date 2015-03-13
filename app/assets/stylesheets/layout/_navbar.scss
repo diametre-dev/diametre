@@ -9,7 +9,7 @@ $navbar-text-transform: capitalize;
 $navbar-font-weight: 300;
 $navbar-letter-spacing: 1.5px;
 $navbar-font-family: $navbar-font;
-$navbar-bg: white;
+$navbar-bg: #2A316D;
 
 /* -------------------------------------
  * Box model
@@ -42,7 +42,7 @@ $navbar-profile-border-width: 2px;
 
 .navbar-wagon {
   background: $navbar-bg;
-  font-family: $navbar-font-family;
+  font-family: Pt Mono;
   border: none;
   font-size: $navbar-font-size;
   text-transform: $navbar-text-transform;
@@ -53,6 +53,7 @@ $navbar-profile-border-width: 2px;
   border-bottom: $navbar-border-bottom-width solid $navbar-border-bottom-color;
   min-height: 80px;
   transition: background 0.4s ease;
+  //height: 225px;
 
 
   .navbar-nav > li > a,
@@ -168,7 +169,12 @@ ul.nav.navbar-nav.navbar-right {
   li {
     margin: 5px;
     align: center;
+    color: #FFFFFF;
   }
 }
 
+/*.container-fluid {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}*/
 
