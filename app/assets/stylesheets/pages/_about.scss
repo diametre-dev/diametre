@@ -1,13 +1,15 @@
-.about {
-}
 .card {
   background-color: white;
   height: 480px;
   width: 800px;
   margin: auto;
+  padding: 20px;
+}
+
+.team-card {
+  margin: 20px;
 }
 
 .title {
   letter-spacing: 2.5px;
-  text-align: center;
 }
