@@ -53,7 +53,10 @@ $navbar-profile-border-width: 2px;
   border-bottom: $navbar-border-bottom-width solid $navbar-border-bottom-color;
   min-height: 80px;
   transition: background 0.4s ease;
-  //height: 225px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top:0;
 
 
   .navbar-nav > li > a,
@@ -173,8 +176,6 @@ ul.nav.navbar-nav.navbar-right {
   }
 }
 
-/*.container-fluid {
-  padding-top: 70px;
-  padding-bottom: 70px;
-}*/
+
+
 
