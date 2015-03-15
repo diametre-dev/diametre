@@ -40,9 +40,7 @@
   background-color: yellow;
   color: rgb(0, 0, 0);
   display: block;
-  font-size: 14px;
   height: 100% auto;
-  line-height: 24px;
   margin-left: 400px;
   pointer-events: auto;
   text-rendering: optimizelegibility;
@@ -50,9 +48,6 @@
   p, h2 {
     padding: 30px;
     margin: 0;
-  }
-  h3 {
-    font-size: 14px;
   }
 }
 
@@ -109,3 +104,79 @@
 .title {
   letter-spacing: 2.5px;
 }
+
+/* RESPONSIVE BIG DIV */
+
+@media screen and (max-width: 1050px) {
+  #divabout2 {
+    p {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+  #divabout2 {
+    p {
+      font-size: 10px;
+      line-height: 16px;
+    }
+  }
+}
+
+
+
+/* RESPONSIVE SMALL DIV */
+
+@media screen and (max-width: 1160px) {
+  #divabout1 {
+    h2 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 1000px) {
+  #divabout1 {
+    h2 {
+      font-size: 26px;
+    }
+    p {
+      font-size: 10px;
+      line-height: 16px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 840px) {
+  #divabout1 {
+    h2 {
+      font-size: 22px;
+    }
+    p {
+      font-size: 9px;
+      line-height: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  #divabout1 {
+    h2 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 8px;
+      line-height: 10px;
+    }
+  }
+}
+
