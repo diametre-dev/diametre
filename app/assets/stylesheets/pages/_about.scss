@@ -1,10 +1,10 @@
 /* My Work */
 
-.activesection {
+.active {
   display: block;
 }
 
-.unactivesection {
+.inactive {
   display: none;
 }
 
@@ -53,7 +53,7 @@
 .content-left {
   background-attachment: scroll;
   background-clip: border-box;
-  background-color: rgb(2, 168, 243);
+  background-color: #2A316D;
   background-origin: padding-box;
   background-position: 0% 0%;
   background-repeat: repeat;
@@ -62,7 +62,6 @@
   left:0;
   box-sizing: border-box;
   color: rgb(255, 255, 255);
-  display: block;
   font-size: 14px;
   height: auto;
   line-height: 24px;
@@ -76,6 +75,9 @@
   text-rendering: optimizelegibility;
   top: 79px;
   width: 400px;
+  h2 {
+    color: rgb(255, 255, 255)
+  }
   p {
     margin: 15px;
     //font-family: Oswald;
