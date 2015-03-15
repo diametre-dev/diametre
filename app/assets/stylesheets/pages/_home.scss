@@ -5,23 +5,12 @@
   top: 80px;
 }
 
-
-
 .gvignette {
-  border-bottom-color: #2A316D;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-left-color: #2A316D;
-  border-left-style: solid;
-  border-left-width: 2px;
-  border-right-color: #2A316D;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-top-color: #2A316D;
-  border-top-style: solid;
-  border-top-width: 2px;
+  border-color: #2A316D;
+  border-style: solid;
+  border-width: 2px;
+  color: #2A316D;
   box-sizing: border-box;
-  color: black;
   display: block;
   float: left;
   clear: all;
@@ -29,26 +18,18 @@
   font-weight: normal;
   height: 230px;
   line-height: 24px;
+  font-size: 14px;
   h2, p, li {
-    padding: 5px;
+    padding: 15px;
   }
 }
 
-/*.gvignette:hover {
-  background-color: #2A316D;
-  border-color: #FFFFFF;
-  color: #FFFFFF;
-  h2 {
-    color: #FFFFFF;
-  }
-}*/
-
 #divbig {
-  width: 52% ;
+  width: 52%;
 }
 
 #divsmall  {
-  width: 24% ;
+  width: 24%;
 }
 
 .gcontainer{
@@ -58,16 +39,10 @@
   padding-right: 5% auto !important;
   margin:0 auto !important;
   box-sizing: border-box;
-  color: rgb(119, 119, 119);
   display: block;
   font-size: 14px;
   font-weight: normal;
   height: 100% auto;
-  line-height: 24px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 0px;
   max-width: 1440px;
   padding-bottom: 30px;
   padding-left: 100px;
@@ -79,17 +54,53 @@
 }
 
 .grow {
-  color: rgb(119, 119, 119);
   display: block;
-  font-size: 14px;
   font-weight: normal;
   height: auto;
-  line-height: 24px;
   width: auto;
   margin: 0 auto;
 }
 
 h2 {
   font-family: Oswald;
-  color: #2A316D;
 }
+
+@media screen and (max-width: 1160px) {
+  .grow #divsmall {
+    h2 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #divsmall {
+    h2 {
+      font-size: 28px;
+    }
+    p {
+      font-size: 10px;
+      line-height: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 840px) {
+  #divsmall {
+    h2 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 9px;
+      line-height: 12px;
+    }
+  }
+}
+
+
+
+
