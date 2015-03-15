@@ -29,15 +29,15 @@
 
 #divabout4 {
   width: 33.33%;
-  height: 270px;
+  height: 180px;
   font-family: Pt Mono;
+  overflow: hidden;
 }
 
 .content-right {
   top: 79px;
   margin-top: 80px;
   box-sizing: border-box;
-  background-color: yellow;
   color: rgb(0, 0, 0);
   display: block;
   height: 100% auto;
@@ -87,6 +87,7 @@
     padding: 30px;
   }
 }
+
 
 /* TEAM MEMBER */
 .card {
