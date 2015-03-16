@@ -42,8 +42,6 @@
   display: block;
   height: 100% auto;
   margin-left: 400px;
-  pointer-events: auto;
-  text-rendering: optimizelegibility;
   width: auto;
   p {
     padding: 30px;
@@ -101,7 +99,8 @@
 /* TEAM MEMBER */
 
 .team-card {
-  max-width:33.33%;
+  max-width: 33.33%;
+  min-width: 33.33%;
   min-height: 400px;
   background-color:#2A316D;
   height: auto;
