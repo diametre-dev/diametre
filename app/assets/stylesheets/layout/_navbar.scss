@@ -1,7 +1,7 @@
 /* -------------------------------------
  * Colors & Fonts
  * ------------------------------------- */
-$navbar-color: $gray-light;
+$navbar-color: $gray-lighter;
 $navbar-hover-color: $yellow;
 $navbar-font-family: $navbar-font;
 $navbar-font-size: 14px;
@@ -93,7 +93,7 @@ $navbar-profile-border-width: 2px;
     margin-top: ($navbar-height + 2 * $navbar-vertical-padding - $navbar-btn-height) / 2;
     font-weight: bold;
     background-color: $navbar-btn-bg;
-    font-size: 12px;
+    font-size: 10px;
     &:hover{
       background-color: darken($navbar-btn-bg, 30%);
     }
@@ -168,11 +168,18 @@ navbar-right {
 }
 
 ul.nav.navbar-nav.navbar-right {
-  padding: 25px;
+  padding: 5px;
   li {
     margin: 5px;
     align: center;
     color: #FFFFFF;
+  }
+}
+
+#secret {
+  color: gray-darker;
+  &:hover {
+    color: gray;
   }
 }
 
