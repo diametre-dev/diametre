@@ -1,4 +1,4 @@
-<!-- RIGHT CONTENT -->
+<!-- RIGHT CONTENT BEGINS -->
 
 <!-- DIAMETRE DESCRIPTION -->
   <div class="content-right">
@@ -22,48 +22,25 @@
       <div class="gvignette" id="divabout3" style="background-color: #2A316D"></div>
     </div>
 
-
     <!--- TEAM TEAM TEAM -->
-<% Member.all.each do |member| %>
-  <div class="grow">
-    <div class="team-card gvignette" id="divabout4">
-      <%= image_tag member.picture.url(:medium)%>
-    </div>
-    <div class="gvignette" id="divabout4">
-      <%= member.name %>, <%= member.job %>
-    </div>
-    <div class="gvignette" id="divabout4">
-      <%= member.description %>
-    </div>
+<<<<<<< HEAD
+    <% Member.all.each do |member| %>
+      <div class="team-card">
+        <%= image_tag member.picture.url(:medium) %>
+        <h3><%= member.name %>, <%= member.job %></h3>
+        <p><%= member.description %></p>
+      </div>
+    <% end %>
+
+>>>>>>> master
   </div>
-<% end %>
+<!-- RIGHT CONTENT ENDS -->
 
-
-  <div class="grow">
-      <div class="gvignette" id="divabout4"> <img src="http://www.online-image-editor.com//styles/2014/images/example_image.png" style="width: 100%"></div>
-      <div class="gvignette" id="divabout4"><p>Ce chaton est magnifique</p></div>
-      <div class="gvignette" id="divabout4"><p>Il apporte sa contribution à l'association</p></div>
-  </div>
-
-   <div class="grow">
-      <div class="gvignette" id="divabout4"> <img src="http://www.online-image-editor.com//styles/2014/images/example_image.png" style="width: 100%"></div>
-      <div class="gvignette" id="divabout4"><p>Ce chaton est magnifique</p></div>
-      <div class="gvignette" id="divabout4"><p>Il apporte sa contribution à l'association</p></div>
-  </div>
-
-  <div class="grow">
-    <div class="gvignette" id="divabout4"></div>
-    <div class="gvignette" id="divabout4"></div>
-    <div class="gvignette" id="divabout4"></div>
-  </div>
-
-</div>
-
-<!-- LEFT CONTENT -->
+<!-- LEFT CONTENT BEGINS -->
 
 <!-- DIAMETRE DESCRIPTION -->
   <div class="content-left active" id="about">
-    <h2 style="text-align: center">L'ASSOCIATION</h2>
+    <h2>L'ASSOCIATION</h2>
     <p>DIAMÈTRE EST UNE ASSOCIATION DE LOI 1901 COMPOSÉE D’ÉTUDIANTS DE L’ECOLE DU LOUVRE, DE SCIENCES PO PARIS ET DE LA SORBONNE. ELLE A POUR OBJET DE DÉFENDRE, PROMOUVOIR ET DIFFUSER LE TRAVAIL D’ARTISTES ENCORE ÉTUDIANTS OU TOUT JUSTE DIPLÔMÉS. ISSUS DE FORMATIONS MANAGÉRIALES, SCIENTIFIQUES ET PLASTIQUES, LES MEMBRES DE DIAMÈTRE ONT À COEUR DE FÉDÉRER LEURS DIFFÉRENTS DOMAINES D’EXPERTISES AFIN DE DONNER UNE NOUVELLE IMPULSION AU PAYSAGE ARTISTIQUE DE LEUR GÉNÉRATION.</p>
   </div>
 
@@ -73,5 +50,5 @@
     <p> SUPER TEAM DE OUF QUI TUE. "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT. DUIS AUTE IRURE DOLOR IN REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE EU FUGIAT NULLA PARIATUR. EXCEPTEUR SINT OCCAECAT CUPIDATAT NON PROIDENT, SUNT IN CULPA QUI OFFICIA DESERUNT MOLLIT ANIM ID EST LABORUM."
 </p>
   </div>
-
+<!-- LEFT CONTENT ENDS -->
 

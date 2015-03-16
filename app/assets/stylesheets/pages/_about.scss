@@ -61,6 +61,7 @@
 }
 
 .content-left {
+  text-transform: uppercase;
   background-attachment: scroll;
   background-clip: border-box;
   background-color: #2A316D;
@@ -75,8 +76,7 @@
   line-height: 24px;
   margin: 0;
   max-width: none;
-  overflow-x: scroll;
-  overflow-y: scroll;
+  overflow: scroll;
   padding: 0;
   pointer-events: auto;
   position: fixed;
@@ -99,15 +99,48 @@
 
 
 /* TEAM MEMBER */
-.card {
-  background-color: white;
-  //height: 480px;
-  //width: 800px;
-  //margin: auto;
-  //padding: 20px;
-}
 
 .team-card {
+<<<<<<< HEAD
+  max-width:33.33%;
+  min-height: 400px;
+  background-color:#2A316D;
+  height: auto;
+  width: auto;
+  position: relative;
+  float:left;
+  clear:all;
+  img {
+    position: relative;
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    left: 50%;
+    width:200px;
+    height:200px;
+    border-radius: 100%;
+  }
+  p {
+    color: rgb(255, 255, 255);
+    line-height: 24px;
+    font-size: 12px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+  h3 {
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-family: Oswald;
+    margin: 0;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+  }
+=======
   background-color: #2A316D;
   min-height: 200px;
   min-width: 150px;
@@ -123,6 +156,7 @@
 
 .title {
   letter-spacing: 2.5px;
+>>>>>>> master
 }
 
 /* RESPONSIVE BIG DIV */
@@ -280,6 +314,27 @@
     margin-left: 225px;
   }
 }
+
+/* RESPONSIVE IMG TEAM */
+
+@media screen and (max-width: 1050px) {
+  .team-card {
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .team-card {
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
 
 
 
