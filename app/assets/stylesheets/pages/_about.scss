@@ -23,7 +23,7 @@
 
 #divabout3 {
   width: 100%;
-  height: 270px;
+  height: 100px;
   font-family: Pt Mono;
 }
 
@@ -35,14 +35,17 @@
 }
 
 .content-right {
-  top: 79px;
-  margin-top: 80px;
+  top: 90px;
+  //margin-top: 90px;
   box-sizing: border-box;
   color: rgb(0, 0, 0);
   display: block;
   height: 100% auto;
-  margin-left: 400px;
+  left: 400px;
+  position: absolute;
+  //margin-left: 400px;
   width: auto;
+  overflow: hidden;
   p {
     padding: 30px;
     margin: 0;
@@ -79,7 +82,7 @@
   pointer-events: auto;
   position: fixed;
   text-rendering: optimizelegibility;
-  top: 79px;
+  top: 90px;
   width: 400px;
   h2 {
     color: rgb(255, 255, 255);
@@ -252,7 +255,10 @@
     }
   }
   .content-right {
-    margin-left: 300px;
+    left: 300px;
+  }
+  .map-wrapper {
+    left: 300px;
   }
 }
 
@@ -272,7 +278,10 @@
     }
   }
   .content-right {
-    margin-left: 250px;
+    left: 250px;
+  }
+  .map-wrapper {
+    left: 250px;
   }
 }
 
@@ -292,7 +301,10 @@
     }
   }
   .content-right {
-    margin-left: 225px;
+    left: 225px;
+  }
+  .map-wrapper {
+    left: 225px;
   }
 }
 
