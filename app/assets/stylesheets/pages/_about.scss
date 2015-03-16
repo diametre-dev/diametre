@@ -108,8 +108,18 @@
 }
 
 .team-card {
+  background-color: #2A316D;
+  min-height: 200px;
+  min-width: 150px;
+  text-align: text-center;
   //margin: 20px;
 }
+
+.team-info {
+  color: white;
+  //margin: 20px;
+}
+
 
 .title {
   letter-spacing: 2.5px;
