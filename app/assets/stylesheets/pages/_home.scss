@@ -1,8 +1,9 @@
 /* MY WORK */
 
 .container {
-  display: block;
+  display: none;
   top: 80px;
+  width: 1px;
 }
 
 .gvignette {
@@ -39,7 +40,7 @@
 }
 
 .gcontainer{
-  top: 80px;
+  top: 90px;
   position: relative;
   padding-left: 5% auto;
   padding-right: 5% auto;

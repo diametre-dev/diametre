@@ -3,17 +3,37 @@
 @import "footer";
 @import "navbar";
 
+/* MAP */
+#map {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.map-wrapper {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  left: 400px;
+  top: 90px;
+}
+
+/* BLOGPOST */
 .back-article {
+  box-sizing: border-box;
   background-color: #2A316D;
   width: auto;
   height: auto;
   margin: 0;
   padding: 30px;
   position: relative;
-  margin-top: 110px;
+  margin-top: 30px;
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 20px;
+  right: 0;
 }
 
 .article {
