@@ -8,7 +8,6 @@
   display: none;
 }
 
-
 #divabout1 {
   width: 40%;
   height: 270px;
@@ -32,6 +31,10 @@
   height: 180px;
   font-family: Pt Mono;
   overflow: hidden;
+}
+
+#blue-background {
+  background-color: #2A316D;
 }
 
 .content-right {
@@ -105,7 +108,7 @@
   max-width: 33.33%;
   min-width: 33.33%;
   min-height: 400px;
-  background-color:#2A316D;
+  background-color: rgb(239, 239, 239);
   height: auto;
   width: auto;
   position: relative;
@@ -120,25 +123,30 @@
     width:200px;
     height:200px;
     border-radius: 100%;
+    padding: 10px;
   }
   p {
-    color: rgb(255, 255, 255);
+    //color: rgb(255, 255, 255);
+    color: #2A316D;
     line-height: 24px;
     font-size: 12px;
     padding-top: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
     padding-bottom: 10px;
+    text-align: justify;
   }
   h3 {
     text-transform: uppercase;
-    color: rgb(255, 255, 255);
+    text-align: center;
+    //color: rgb(255, 255, 255);
+    color: #2A316D;
     font-size: 14px;
     font-family: Oswald;
     margin: 0;
     padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
     padding-bottom: 5px;
   }
 }
