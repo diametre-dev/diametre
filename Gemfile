@@ -23,6 +23,9 @@ gem "font-awesome-sass"
 gem "rails-i18n"
 gem "devise-i18n"
 gem "devise-i18n-views"
+gem "geocoder"
+gem "gmaps4rails"
+gem "rails-assets-underscore"
 
 group :development, :test do
   gem "spring"
