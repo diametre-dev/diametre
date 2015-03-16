@@ -27,7 +27,7 @@
 <% Member.all.each do |member| %>
   <div class="grow">
     <div class="team-card gvignette" id="divabout4">
-      <%= image_tag member.picture.url(:medium) %>
+      <%= image_tag member.picture.url(:medium)%>
     </div>
     <div class="gvignette" id="divabout4">
       <%= member.name %>, <%= member.job %>
@@ -37,6 +37,7 @@
     </div>
   </div>
 <% end %>
+
 
   <div class="grow">
       <div class="gvignette" id="divabout4"> <img src="http://www.online-image-editor.com//styles/2014/images/example_image.png" style="width: 100%"></div>

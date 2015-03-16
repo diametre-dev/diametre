@@ -16,35 +16,50 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li>Home</li>
-        <li>Blog</li>
-        <li>About</li>
-
-
+        <li>
+          <%= link_to "BLOG", blog_path%>
+        </li>
+        <li>
+          <%= link_to "A PROPOS", page_path('about') %>
+        </li>
+        <li>
+          <%= mail_to "diametre.development@gmail.com" do %>
+            CONTACT
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "http://www.facebook.com/diametrejeunecreation?fref=ts", target: "_blank" do %>
+            <i class="fa fa-facebook-square"></i>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to new_user_session_path, id: "secret" do %>
+            <i class="fa fa-circle-thin"></i>
+          <% end %>
+        </li>
         <% if user_signed_in? %>
-          <!--<li class="dropdown">
+        <li>
+          <%= link_to "ADMIN", admin_dashboard_path %>
+        </li>
+          <li class="dropdown">
             <%= link_to "#", {class: "dropdown-toggle", "data-toggle" => "dropdown", "role" => "button", "aria-expanded" => "false"} do %>
-              <%= image_tag "http://placehold.it/30x30", class: "img-avatar" %>
-              Profile <span class="caret"></span>
+              My account <span class="caret"></span>
             <% end %>
             <ul class="dropdown-menu" role="menu">
               <li>
-                <%= link_to "#" do %>
-                  <i class="fa fa-user"></i> <%= t ".profile", default: "Profile" %>
-                <% end %>
+                <%= link_to "Dashboard", account_path%>
               </li>
               <li>
-                <%= link_to "#" do %>
-                  <i class="fa fa-home"></i>  <%= t ".profile", default: "Flat" %>
-                <% end %>
+                <%= link_to "Edit", edit_account_path %>
               </li>
               <li>
-                <%= link_to destroy_user_session_path, method: :delete do %>
-                  <i class="fa fa-sign-out"></i>  <%= t ".sign_out", default: "Sign out" %>
-                <% end %>
+                <%= link_to "My posts", account_posts_path %>
+              </li>
+              <li>
+                <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
               </li>
             </ul>
-          </li> -->
+          </li>
         <% else %>
           <li>
             <%#= link_to t(".sign_up", default: "Sign up"), new_user_registration_path %>
