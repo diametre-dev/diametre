@@ -3,19 +3,75 @@
 @import "footer";
 @import "navbar";
 
-/*.back-article {
+/* MAP */
+#map {
   position: relative;
-  background-color: #2A316D;
+  height: 100%;
   width: 100%;
-  height: auto;
-  margin: 20px;
-}*/
+}
 
-.article {
+.map-wrapper {
+  position: fixed;
   width: 100%;
   height: auto;
-  background-color: rgb(239, 239, 239);
-  border-size: 40px;
-  border-style: solid;
-  border-color: #2A316D;
+  bottom: 0;
+  right: 0;
+  left: 400px;
+  top: 90px;
+}
+
+/* BLOGPOST */
+
+.content-right {
+  .back-article {
+    border-radius: 3px;
+    box-sizing: border-box;
+    background-color: #2A316D;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    right: 0;
+    .article {
+      border-radius: 3px;
+      width: 100%;
+      height: auto;
+      background-color: rgb(239, 239, 239);
+      position: relative;
+      color: #2A316D;
+      img {
+        max-width: 100%;
+        min-width: 100%;
+        padding: 50px;
+      }
+      h1 {
+        posistion: relative;
+        margin: 0;
+        padding-right: 50px;
+        padding-top: 45px;
+        padding-bottom: 15px;
+        padding-left: 50px;
+        text-transform: uppercase;
+        font-size: 34px;
+      }
+      h3 {
+        position: relative;
+        margin: 0;
+        padding-bottom: 15px;
+        padding-left: 50px;
+        padding-right: 50px;
+        font-style: italic;
+        font-size: 28px;
+      }
+      p {
+        padding: 50px;
+        font-size: 14px;
+      }
+    }
+  }
 }
