@@ -58,6 +58,9 @@ $navbar-profile-border-width: 2px;
   z-index: 999;
   top:0;
 
+  .navbar-header {
+    margin-top: 10px;
+  }
 
   .navbar-nav > li > a,
   .navbar-nav > .open > a,

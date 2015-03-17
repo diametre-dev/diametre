@@ -1,34 +1,12 @@
 /* MY WORK */
 
-.container {
-  display: none;
-  top: 80px;
-  width: 1px;
-}
+/* BASICS */
 
-.gvignette {
-  border-color: #2A316D;
-  border-style: solid;
-  border-width: 2px;
-  color: #2A316D;
-  box-sizing: border-box;
-  float: left;
-  clear: all;
-  font-size: 14px;
-  font-weight: normal;
-  height: 230px;
-  line-height: 24px;
-  font-size: 14px;
-  position: relative;
-  h2 {
-    -ms-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    position: absolute;
-    margin: 0;
-    top: 50%;
-    left: 50%;
-  }
+h1, h2, h3 {
+  font-family: Oswald;
+}
+a {
+  color: inherit;
 }
 
 #divbig {
@@ -38,6 +16,15 @@
 #divsmall  {
   width: 24%;
 }
+
+/* KILL CONTAINER */
+.container {
+  display: none;
+  top: 80px;
+  width: 1px;
+}
+
+/* HOME DESIGN */
 
 .gcontainer{
   top: 90px;
@@ -57,18 +44,38 @@
   width: auto;
   margin: 0 auto;
   overflow: scroll;
+  .grow {
+    font-weight: normal;
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+    .gvignette {
+      border-color: #2A316D;
+      border-style: solid;
+      border-width: 2px;
+      color: #2A316D;
+      box-sizing: border-box;
+      float: left;
+      clear: all;
+      font-size: 14px;
+      font-weight: normal;
+      height: 230px;
+      line-height: 24px;
+      font-size: 14px;
+      position: relative;
+      h2 {
+        -ms-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        position: absolute;
+        margin: 0;
+        top: 50%;
+        left: 50%;
+      }
+    }
+  }
 }
 
-.grow {
-  font-weight: normal;
-  height: auto;
-  width: auto;
-  margin: 0 auto;
-}
-
-h1, h2, h3 {
-  font-family: Oswald;
-}
 
 /* RESPONSIVE DIV */
 
@@ -77,37 +84,47 @@ h1, h2, h3 {
     h2 {
       font-size: 30px;
     }
-    p {
-      font-size: 12px;
-      line-height: 20px;
-    }
   }
 }
 
 @media screen and (max-width: 1000px) {
-  #divsmall {
+  .grow #divsmall {
     h2 {
-      font-size: 28px;
+      font-size: 26px;
     }
-    p {
-      font-size: 10px;
-      line-height: 16px;
+  }
+  .grow #divbig {
+    h2 {
+      font-size: 30px;
     }
   }
 }
 
 @media screen and (max-width: 840px) {
-  #divsmall {
+  .grow #divsmall {
     h2 {
-      font-size: 24px;
-    }
-    p {
-      font-size: 9px;
-      line-height: 12px;
+      font-size: 22px;
     }
   }
 }
 
+@media screen and (max-width: 700px) {
+  .grow #divsmall {
+    h2 {
+      font-size: 18px;
+    }
+  }
+  .grow #divbig {
+    h2 {
+      font-size: 26px;
+    }
+  }
+}
 
-
-
+@media screen and (max-width: 600px) {
+  .grow #divsmall {
+    h2 {
+      font-size: 12px;
+    }
+  }
+}
