@@ -270,6 +270,9 @@
   .map-wrapper {
     left: 300px;
   }
+  .form-wrapper {
+    margin-left: 300px;
+  }
 }
 
 @media screen and (max-width: 680px) {
@@ -293,6 +296,9 @@
   .map-wrapper {
     left: 250px;
   }
+  .form-wrapper {
+    margin-left: 250px;
+  }
 }
 
 @media screen and (max-width: 580px) {
@@ -315,6 +321,9 @@
   }
   .map-wrapper {
     left: 225px;
+  }
+  .form-wrapper {
+    margin-left: 225px;
   }
 }
 

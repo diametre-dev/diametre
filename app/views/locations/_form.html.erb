@@ -1,3 +1,5 @@
+<h2 style="text-align: center">Create a new location</h2>
+<div class="box-form" id="big-form">
 <%= simple_form_for (@location), url: account_locations_path, method: :post do |f| %>
   <%= f.error_notification %>
   <%= f.input :name %>
@@ -5,3 +7,4 @@
   <%= f.input :description %>
   <%= f.submit 'Create!', class: "btn btn-success" %>
 <% end %>
+</div>
