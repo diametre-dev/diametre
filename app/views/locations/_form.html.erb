@@ -1,0 +1,7 @@
+<%= simple_form_for (@location), url: account_locations_path, method: :post do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :description %>
+  <%= f.submit 'Create!', class: "btn btn-success" %>
+<% end %>

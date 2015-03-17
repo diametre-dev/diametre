@@ -2,18 +2,23 @@
   <div class="map-wrapper">
     <div id="map"></div>
   </div>
+
+  <div style='width: 800px;'>
+    <div id="sidebar_builder" style='width: 800px; height: 400px;'></div>
+  </div>
+
+
 <!--</div>-->
 <div class="content-left active">
     <h2 style="text-align: center">MAP</h2>
     <p>LOCATIONS</p>
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+
+    <ul class="list-unstyled">
+      <div id='sidebar_container'>
+      </div>
     </ul>
-  </div>
+</div>
+
 
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>
@@ -111,9 +116,36 @@
       }
     ];
 
+      function createSidebarLi(json){
+        return ("<li><a>" + json.marker_title + "</a></li>");
+      };
+
+      function bindLiToMarker($li, marker){
+        $li.on('click', function(){
+          handler.getMap().setZoom(14);
+          marker.setMap(handler.getMap());
+          marker.panTo();
+          google.maps.event.trigger(marker.getServiceObject(), 'click');
+        })
+      };
+
+      function createSidebar(json_array){
+        _.each(json_array, function(json){
+          var $li = $( createSidebarLi(json) );
+          $li.appendTo('#sidebar_container');
+          bindLiToMarker($li, json.marker);
+        });
+      };
+
       var handler = Gmaps.build('Google');
       handler.buildMap({ internal: {id: 'map'}, provider: { styles: mapStyle }}, function(){
-        var markers = handler.addMarkers(<%= raw @markers.to_json %>);
+        var json_array = <%= raw @markers.to_json %>;
+        var markers = handler.addMarkers(json_array);
+        _.each(json_array, function(json, index){
+          json.marker = markers[index];
+        });
+
+        createSidebar(json_array);
         handler.bounds.extendWith(markers);
         handler.fitMapToBounds();
       });
