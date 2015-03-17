@@ -19,9 +19,8 @@ a {
 
 /* KILL CONTAINER */
 .container {
-  display: none;
-  top: 80px;
-  width: 1px;
+  //display: none;
+  top: 90px;
 }
 
 /* HOME DESIGN */
@@ -44,38 +43,39 @@ a {
   width: auto;
   margin: 0 auto;
   overflow: scroll;
-  .grow {
-    font-weight: normal;
-    height: auto;
-    width: auto;
-    margin: 0 auto;
-    .gvignette {
-      border-color: #2A316D;
-      border-style: solid;
-      border-width: 2px;
-      color: #2A316D;
-      box-sizing: border-box;
-      float: left;
-      clear: all;
-      font-size: 14px;
-      font-weight: normal;
-      height: 230px;
-      line-height: 24px;
-      font-size: 14px;
-      position: relative;
-      h2 {
-        -ms-transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        position: absolute;
-        margin: 0;
-        top: 50%;
-        left: 50%;
-      }
-    }
-  }
 }
 
+.grow {
+  font-weight: normal;
+  height: auto;
+  width: auto;
+  margin: 0 auto;
+}
+
+.gvignette {
+  border-color: #2A316D;
+  border-style: solid;
+  border-width: 2px;
+  color: #2A316D;
+  box-sizing: border-box;
+  float: left;
+  clear: all;
+  font-size: 14px;
+  font-weight: normal;
+  height: 230px;
+  line-height: 24px;
+  font-size: 14px;
+  position: relative;
+  h2 {
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+  }
+}
 
 /* RESPONSIVE DIV */
 
