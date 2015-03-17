@@ -1,31 +1,24 @@
 class Accounts::LocationsController < ApplicationController
   # before_action :authenticate_user!
-  # before_action :find_post, only: [:show, :edit, :update, :destroy]
+  before_action :find_location, only: [:show, :edit, :update, :destroy]
   # after_action :verify_authorized
   # after_action :verify_policy_scoped
 
   def index
-    # # dans la view current_user.posts.each
-    # # authorize Post
-    # @posts = Post.all
+    @locations = Location.all
   end
 
   def show
   end
 
-
-  def new
-    # @post = Post.new()
-  end
-
   def create
-    # @post = Post.new(post_params)
-    # # authorize @post
-    # if @post.save
-    #   redirect_to account_post_path(@post)
-    # else
-    #  render :new
-    # end
+    @location = Location.new(location_params)
+    # authorize @post
+    if @location.save
+      redirect_to account_locations_path
+    else
+     render :new
+    end
   end
 
   def edit
@@ -44,11 +37,11 @@ class Accounts::LocationsController < ApplicationController
   private
 
   def location_params
-    # params.require(:post).permit(:title, :subtitle, :description, :picture, :author)
+    params.require(:location).permit(:name, :address, :description)
   end
 
   def find_location
-    # @post = Post.find(params[:id])
+    @location = Location.find(params[:id])
   end
 
 end

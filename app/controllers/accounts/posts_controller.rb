@@ -13,16 +13,11 @@ class Accounts::PostsController < ApplicationController
   def show
   end
 
-
-  def new
-    @post = Post.new()
-  end
-
   def create
     @post = Post.new(post_params)
     # authorize @post
     if @post.save
-      redirect_to account_post_path(@post)
+      redirect_to account_posts_path
     else
      render :new
     end

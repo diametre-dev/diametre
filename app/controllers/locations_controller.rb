@@ -6,7 +6,8 @@ class LocationsController < ApplicationController
     @markers = Gmaps4rails.build_markers(@locations) do |location, marker|
       marker.lat location.latitude
       marker.lng location.longitude
-      marker.infowindow location.name
+      marker.title location.name
+      marker.infowindow (location.name.capitalize + ", " + location.address)
     end
   end
 end
