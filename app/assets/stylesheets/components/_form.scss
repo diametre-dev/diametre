@@ -2,46 +2,60 @@
  * You killer form SASS module
  * ------------------------------------- */
 
- .box-form {
+
+.post-form {
   background-color: white;
   padding: 20px;
   border-radius: 2.5px;
   box-shadow: 1px 1px 4px rgba(128, 128, 128, 0.42);
   margin-top: $navbar-height;
-  min-width: 50%;
-  max-width: 60%;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
-  border-style: solid;
-  border-size: 5px;
-  border-color: #2A316D;
   h2 {
     color: #2A316D;
     text-transform: uppercase;
   }
   label {
     color: #2A316D;
+  }
+}
 
+ .box-form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 2.5px;
+  box-shadow: 1px 1px 4px rgba(128, 128, 128, 0.42);
+  margin-top: $navbar-height;
+  min-width: 400px;
+  max-width: 60%;
+  margin: 0 auto;
+  h2 {
+    color: #2A316D;
+    text-transform: uppercase;
+  }
+  label {
+    color: #2A316D;
   }
  }
 
  .form-footer {
-  //background: rgb(251, 251, 251);
+  background: rgb(251, 251, 251);
   padding: 30px;
   border-top: 1px solid rgb(224, 224, 224);
   text-align: right;
-  //background: url('submit-background.png');
+  background: url('submit-background.png');
   background-size: 2%;
-  background-color: #2A316D;
   border-radius: 2.5px;
   box-shadow: 1px 1px 4px rgba(128, 128, 128, 0.42);
-  min-width: 50%;
+  min-width: 400px;
   max-width: 60%;
   margin: 0 auto;
   a {
-    color: white;
+    color: #2A316D;
   }
   a:hover {
-
+    color: rgb(70, 154, 224);
   }
  }
 
