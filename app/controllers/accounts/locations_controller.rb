@@ -1,14 +1,11 @@
 class Accounts::LocationsController < ApplicationController
   # before_action :authenticate_user!
-  before_action :find_location, only: [:show, :edit, :update, :destroy]
+  before_action :find_location, only: [:destroy]
   # after_action :verify_authorized
   # after_action :verify_policy_scoped
 
   def index
     @locations = Location.all
-  end
-
-  def show
   end
 
   def create
@@ -19,14 +16,6 @@ class Accounts::LocationsController < ApplicationController
     else
      render :new
     end
-  end
-
-  def edit
-  end
-
-  def update
-    # @post.update(post_params)
-    # redirect_to account_posts_path
   end
 
   def destroy

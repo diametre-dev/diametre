@@ -4,13 +4,13 @@ class AccountsController < ApplicationController
     @post = Post.new()
   end
 
-  def edit
-  end
+  # def edit
+  # end
 
-  def update
-    current_user.update(account_params)
-    redirect_to account_path
-  end
+  # def update
+  #   current_user.update(account_params)
+  #   redirect_to account_path
+  # end
 
   private
 
