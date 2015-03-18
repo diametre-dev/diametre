@@ -1,8 +1,9 @@
 class Accounts::PostsController < ApplicationController
   # before_action :authenticate_user!
-  before_action :find_post, only: [:show, :edit, :update, :destroy]
+  before_action :find_post, only: [:show, :update, :update_picture, :destroy]
   # after_action :verify_authorized
   # after_action :verify_policy_scoped
+  respond_to :html, :json
 
   def show
   end
@@ -17,12 +18,14 @@ class Accounts::PostsController < ApplicationController
     end
   end
 
-  def edit
-  end
-
   def update
     @post.update(post_params)
-    redirect_to account_posts_path
+    respond_with @post
+  end
+
+  def update_picture
+    @post.update(post_picture_param)
+    redirect_to account_post_path(@post)
   end
 
   def destroy
@@ -34,6 +37,10 @@ class Accounts::PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :subtitle, :description, :picture, :author)
+  end
+
+  def post_picture_param
+    params.require(:post).permit(:picture)
   end
 
   def find_post
