@@ -1,17 +1,23 @@
 <h2 style="text-align: center">Create a new location</h2>
 <div class="box-form" id="big-form">
   <%= form_for @location, url: account_locations_path, method: :post do |f| %>
-    <%= f.label "Nom du lieu" %>
-    <%= f.text_field :name %>
-    <%= f.text_field :address, id: 'user_input_autocomplete_address' %>
+    <div class="location_name">
+      <%= f.label "Nom du lieu" %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="location_adresse">
+      <%= f.label "Adresse" %>
+      <%= f.text_field :address, id: 'user_input_autocomplete_address' %>
+    </div>
+    <div class="location_description">
+      <%= f.label "Description" %>
+      <%= f.text_field :description %>
+    </div>
     <input id="street_number" name="street_number" type="hidden" disabled>
     <input id="route" name="route" type="hidden" disabled>
     <input id="locality" name="locality" type="hidden"disabled>
     <input id="country" name="country" type="hidden" disabled>
-    <%= f.label "Description" %>
-    <%= f.text_field :description %>
-    <%= f.label "Adresse" %>
-    <%= f.submit "Créer" %>
+   <%= f.submit "Créer", class:"btn" %>
   <% end %>
 </div>
 

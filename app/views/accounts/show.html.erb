@@ -7,9 +7,7 @@
 </div>
 
 <div class="form-wrapper inactive" id="layer2">
-  <div class="post-form">
       <% @posts.each do |post| %>
-    <!--<div class="card">-->
         <div class="mini-card">
           <div class="inside-card">
             <%= link_to account_post_path(post) do %>
@@ -20,8 +18,6 @@
           </div>
         </div>
         <% end %>
-      <!--</div>-->
-  </div>
 </div>
 
 <div class="form-wrapper inactive" id="layer3">
@@ -31,31 +27,29 @@
 </div>
 
 <div class="form-wrapper inactive" id="layer4">
+  <h2 style="text-align: center">Vos lieux</h2>
+    <div class="box-form" id="big-form">
   <% @locations.each do |location| %>
-    <%= location.name %> - <%= link_to account_location_path(location), method: :delete do %>
-      <i class="fa fa-trash-o"></i>
-    <% end %>
+      <h3>
+        <%= location.name %> - <%= link_to account_location_path(location), method: :delete do %>
+          <i class="fa fa-trash-o"></i>
+        <% end %>
+      </h3>
   <% end %>
-</div>
-
-<div class="form-wrapper inactive" id="layer5">
-
+    </div>
 </div>
 
 <!-- RIGHT CONTENT ENDS -->
 
-
-
 <!-- LEFT CONTENT BEGINS -->
 <div class="content-left">
-  <h2>Hello 'whatever your dummie name is'</h2>
-  <p>What's you wanna do homie ?</p>
+  <h2>Bonjour 'nom de l'être humain à qui la machine s'adresse'</h2>
+  <p>Que puis-je pour vous ?</p>
   <ul>
     <li><a href="#" id="handler1">Créer une nouvelle publication</a></li>
     <li><a href="#" id="handler2">Voir mes publications</a></li>
     <li><a href="#" id="handler3">Créer un lieu</a></li>
     <li><a href="#" id="handler4">Voir les lieux</a></li>
-    <li>no other option left</li>
   </ul>
 </div>
 <!-- LEFT CONTENT ENDS -->
