@@ -8,6 +8,17 @@
 
 <div class="form-wrapper inactive" id="layer2">
   <div class="post-form">
+      <% @posts.each do |post| %>
+    <!--<div class="card">-->
+        <div class="mini-card">
+          <div class="inside-card">
+          <h3><%= post.title %></h3>
+          <p><%= post.subtitle %></p>
+          <%= image_tag post.picture.url(:thumb), class: "avatar"%>
+          </div>
+        </div>
+        <% end %>
+      <!--</div>-->
   </div>
 </div>
 
@@ -18,7 +29,7 @@
 </div>
 
 <div class="form-wrapper inactive" id="layer4">
-  <% Location.all.each do |location| %>
+  <% @locations.each do |location| %>
     <%= location.name %> - <%= link_to account_location_path(location), method: :delete do %>
       <i class="fa fa-trash-o"></i>
     <% end %>

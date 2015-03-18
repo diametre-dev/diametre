@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :locations, only: [:index]
 
   resource :account, only: [:show, :edit, :update] do
-    resources :posts, only: [:index, :show, :create, :update, :destroy], module: :accounts
+    resources :posts, only: [:show, :create, :update, :destroy], module: :accounts
     resources :locations, only: [:create, :destroy], module: :accounts
   end
 end
