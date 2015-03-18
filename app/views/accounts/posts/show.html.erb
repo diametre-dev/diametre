@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="padded">
+    <div class="box-form">
+      <h1><%= best_in_place @post, :title, url: account_post_path(@post) %></h1>
+      <p>
+        <b>Sous-titre :</b>
+        <%= best_in_place @post, :subtitle, url: account_post_path(@post) %>
+      </p>
+      <p>
+        <b>Description:</b>
+        <%= best_in_place @post, :description, url: account_post_path(@post) %>
+      </p>
+      <p>
+        <b>Auteur:</b>
+        <%= best_in_place @post, :author, url: account_post_path(@post) %>
+      </p>
+
+      <%= image_tag @post.picture.url(:medium) %>
+      <%= simple_form_for(@post, html: {multipart: true}, url: update_picture_path(@post), method: :put) do |f| %>
+        <%= f.input :picture, label: "Photo" %>
+        <%= f.submit "Editer la photo" %>
+      <% end %>
+    </div>
+  </div>
+</div>

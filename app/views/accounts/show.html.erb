@@ -12,9 +12,11 @@
     <!--<div class="card">-->
         <div class="mini-card">
           <div class="inside-card">
-          <h3><%= post.title %></h3>
-          <p><%= post.subtitle %></p>
-          <%= image_tag post.picture.url(:thumb), class: "avatar"%>
+            <%= link_to account_post_path(post) do %>
+              <h3><%= post.title %></h3>
+              <p><%= post.subtitle %></p>
+              <%= image_tag post.picture.url(:thumb), class: "avatar"%>
+            <% end %>
           </div>
         </div>
         <% end %>
