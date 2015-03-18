@@ -271,6 +271,12 @@
   .form-wrapper {
     margin-left: 300px;
   }
+  .box-form {
+    min-width: 300px;
+  }
+  .galerie-wrapper {
+    left: 300px;
+  }
 }
 
 @media screen and (max-width: 680px) {
@@ -297,6 +303,12 @@
   .form-wrapper {
     margin-left: 250px;
   }
+  .box-form {
+    min-width: 250px;
+  }
+  .galerie-wrapper {
+    left: 250px;
+  }
 }
 
 @media screen and (max-width: 580px) {
@@ -322,6 +334,12 @@
   }
   .form-wrapper {
     margin-left: 225px;
+  }
+  .box-form {
+    min-width: 225px;
+  }
+  .galerie-wrapper {
+    left: 225px;
   }
 }
 

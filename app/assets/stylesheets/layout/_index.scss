@@ -3,6 +3,10 @@
 @import "footer";
 @import "navbar";
 
+ul {
+  list-style-type:none;
+}
+
 /* MAP */
 #map {
   position: relative;
@@ -35,7 +39,7 @@
   left: 0;
   position: absolute;
   //margin-left: 400px;
-  width: auto;
+  width: 100%;
   overflow: hidden;
   .back-article {
     box-shadow: rgba(128, 128, 128, 0.419608) 1px 1px 4px 0px;
