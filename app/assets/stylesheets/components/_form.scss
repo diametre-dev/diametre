@@ -2,6 +2,46 @@
  * You killer form SASS module
  * ------------------------------------- */
 
+.location_description {
+  min-height: 200px;
+  textarea {
+   height: 200px;
+   position: relative;
+   max-width: 100%;
+   max-height: 200px;
+   font-size: 11px;
+   color: #2A316D;
+  }
+}
+
+post_title {
+  input {
+    color: #2A316D;
+  }
+}
+
+.post_description {
+  min-height: 200px;
+  textarea {
+   height: 200px;
+   position: relative;
+   max-width: 100%;
+   max-height: 200px;
+   font-size: 11px;
+   color: #2A316D;
+  }
+}
+
+.post_subtitle {
+  max-height: 60px;
+  textarea {
+   height: 40px;
+   position: relative;
+   max-width: 100%;
+   max-height: 40px;
+   color: #2A316D;
+  }
+}
 
 .form-wrapper {
   position: relative;
