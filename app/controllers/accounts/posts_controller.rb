@@ -4,12 +4,6 @@ class Accounts::PostsController < ApplicationController
   # after_action :verify_authorized
   # after_action :verify_policy_scoped
 
-  def index
-    # dans la view current_user.posts.each
-    # authorize Post
-    @posts = Post.all
-  end
-
   def show
   end
 
