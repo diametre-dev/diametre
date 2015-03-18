@@ -8,6 +8,6 @@ Rails.application.routes.draw do
 
   resource :account, only: [:show, :edit, :update] do
     resources :posts, only: [:index, :show, :create, :update, :destroy], module: :accounts
-    resources :locations, only: [:index, :show, :create, :destroy], module: :accounts
+    resources :locations, only: [:create, :destroy], module: :accounts
   end
 end

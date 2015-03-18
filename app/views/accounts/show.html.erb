@@ -18,8 +18,17 @@
 </div>
 
 <div class="form-wrapper inactive" id="layer4">
+  <% Location.all.each do |location| %>
+    <%= location.name %> - <%= link_to account_location_path(location), method: :delete do %>
+      <i class="fa fa-trash-o"></i>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="form-wrapper inactive" id="layer5">
 
 </div>
+
 <!-- RIGHT CONTENT ENDS -->
 
 
@@ -29,10 +38,10 @@
   <h2>Hello 'whatever your dummie name is'</h2>
   <p>What's you wanna do homie ?</p>
   <ul>
-    <li><a href="#" id="handler1">create a new post</a></li>
-    <li><a href="#" id="handler2">check my posts</a></li>
-    <li><a href="#" id="handler3">create new location</a></li>
-    <li><a href="#" id="handler4">add an other homie to the team</a></li>
+    <li><a href="#" id="handler1">Créer une nouvelle publication</a></li>
+    <li><a href="#" id="handler2">Voir mes publications</a></li>
+    <li><a href="#" id="handler3">Créer un lieu</a></li>
+    <li><a href="#" id="handler4">Voir les lieux</a></li>
     <li>no other option left</li>
   </ul>
 </div>

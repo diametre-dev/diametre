@@ -1,12 +1,7 @@
 class Accounts::LocationsController < ApplicationController
-  # before_action :authenticate_user!
-  before_action :find_location, only: [:destroy]
+  # before_action :authenticate_use@r!
   # after_action :verify_authorized
   # after_action :verify_policy_scoped
-
-  def index
-    @locations = Location.all
-  end
 
   def create
     @location = Location.new(location_params)
@@ -19,8 +14,9 @@ class Accounts::LocationsController < ApplicationController
   end
 
   def destroy
-    # @post.destroy
-    # redirect_to account_posts_path
+    @location = Location.find(params[:id])
+    @location.destroy
+    redirect_to locations_path
   end
 
   private
@@ -28,9 +24,4 @@ class Accounts::LocationsController < ApplicationController
   def location_params
     params.require(:location).permit(:name, :address, :description)
   end
-
-  def find_location
-    @location = Location.find(params[:id])
-  end
-
 end
