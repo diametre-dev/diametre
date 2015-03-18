@@ -15,7 +15,7 @@ class Accounts::LocationsController < ApplicationController
     @location = Location.new(location_params)
     # authorize @post
     if @location.save
-      redirect_to account_locations_path
+      redirect_to locations_path
     else
      render :new
     end
