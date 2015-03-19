@@ -1,0 +1,32 @@
+<div class="padded">
+  <div class="container">
+    <div class="row">
+      <%= render "shared/flashes" %>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <div class="yellow-form">
+          <h2>Nous contacter</h2>
+          <div class="text-left">
+            <%= render 'contacts/form' %>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="yellow-form">
+          <h2>Informations</h2>
+          <ul class='list-unstyle contact-list'>
+            <li>
+              <%= mail_to "diametre.development@gmail.com" do %>
+                contact@diametre.com
+              <% end %>
+            </li>
+            <li>Téléphone</li>
+            <li>Adresse</li>
+            <li>Status?</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
