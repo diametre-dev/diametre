@@ -2,6 +2,40 @@
 
 /* GALERIE */
 
+.arrow-right {
+  /*position: absolute;
+  height: auto;
+  width: 5%;
+  top: 90px;
+  right: 0;
+  bottom: 0;
+  background-color: black;*/
+
+  height: 100%;
+  position: relative;
+  width: 5%;
+  background-color: black;
+  float: right;
+  clear: all;
+}
+
+.arrow-left {
+  /*position: absolute;
+  height: auto;
+  width: 5%;
+  top: 90px;
+  left: 400px;
+  bottom: 0;*/
+
+  background-color: black;
+  height: 100%;
+  position: relative;
+  width: 5%;
+  background-color: black;
+  float:left;
+  clear: all;
+}
+
 .galerie-wrapper {
   position: absolute;
   width: auto;
