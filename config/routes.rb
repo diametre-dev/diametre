@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   get 'blog', to: "posts#index"
   get 'blog/:id', to: "posts#show"
   put 'account/post/:id', to: "accounts/posts#update_picture", as: "update_picture"
+  post '/', to: "subscribers#create", as: "create_subscriber"
+
+
   resources :locations, only: [:index]
 
   resource :account, only: [:show, :edit, :update] do
