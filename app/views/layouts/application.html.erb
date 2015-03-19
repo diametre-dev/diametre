@@ -12,9 +12,8 @@
 </head>
 <body>
   <%= render "shared/navbar" %>
-  <%= render "shared/flashes" %>
-
   <%= yield %>
+
 
   <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyD48TV49s1qIAqlgT_F4kDCAZWWO3wQvSA" %>
   <%= javascript_include_tag "https://google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js" %>
