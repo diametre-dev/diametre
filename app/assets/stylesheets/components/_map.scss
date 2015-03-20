@@ -1,5 +1,6 @@
 .map-infowindow {
   padding: 10px;
+  max-width: 400px;
   &-header {
     font-size: 15px;
     color: #2A316D;
@@ -7,5 +8,6 @@
   &-body {
     font-size: 14px;
     padding-top: 5px;
+    text-align: justify;
   };
 }
