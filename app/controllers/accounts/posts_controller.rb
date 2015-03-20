@@ -12,11 +12,11 @@ class Accounts::PostsController < ApplicationController
     @post = Post.new(post_params)
     # authorize @post
     if @post.save
-      flash[:alert] = "Votre article a bien été sauvegardé."
+      # flash[:notice] = "Votre article a bien été sauvegardé."
       redirect_to account_path
     else
-      flash[:alert] = "Une erreur est survenue. Votre article n'a pas été sauvegardé."
-      render :new
+      # flash[:notice] = "Une erreur est survenue. Votre article n'a pas été sauvegardé."
+      redirect_to account_path
     end
   end
 
