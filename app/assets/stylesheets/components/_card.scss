@@ -10,6 +10,40 @@
   padding:15px;
 }
 
+.new-card {
+  min-width: 33.33%;
+  max-width: 33.33%;
+  max-height: 100%;
+  position: relative;
+  float:left;
+  clear:all;
+  margin: 0;
+  background-color: rgb(239, 239, 239);
+  padding:15px;
+}
+
+.new-inside-card {
+  position: 0;
+  border-radius: 2.5px;
+  bordder-size: 3.5px;
+  border-color: #2A316D;
+  border-style: dashed;
+  height: 280px;
+  position: relative;
+}
+
+i.plus-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, 50%);
+  -webkit-transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%);
+  width: 30%;
+  height: auto;
+  background-image: url('');
+}
+
 .inside-card {
   position: 0;
   background-color: white;

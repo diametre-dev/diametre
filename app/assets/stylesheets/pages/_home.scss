@@ -8,16 +8,12 @@
   width: 100%;
   height: auto;
   top: 45%;
-  //-ms-transform: translate(0, 50%);
-  //-webkit-transform: translate(0, 50%);
-  //transform: translate(0, 50%);
 }
 
 .arrow-right {
   height: 100%;
   position: relative;
   width: 5%;
-//  background-color: black;
   float: right;
   clear: all;
 }
@@ -26,7 +22,6 @@
   height: 100%;
   position: relative;
   width: 5%;
-//  background-color: black;
   float:left;
   clear: all;
 }
@@ -40,11 +35,14 @@
   left: 400px;
   top: 90px;
   overflow: hidden;
+  background-image: url('');
   img {
     position: relative;
     top: 0;
     left: 45%;
     width: 90%;
+    margin-top: 5%;
+    margin-bottom: 5% auto;
     -ms-transform: translate(-50%, 0);
     -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);

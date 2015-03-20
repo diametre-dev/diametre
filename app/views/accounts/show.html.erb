@@ -7,17 +7,22 @@
 </div>
 
 <div class="form-wrapper active" id="layer2">
-      <% @posts.each do |post| %>
-        <div class="mini-card">
-          <div class="inside-card">
-            <%= link_to account_post_path(post) do %>
-              <h3><%= post.title %></h3>
-              <p><%= post.subtitle %></p>
-              <%= image_tag post.picture.url(:thumb), class: "avatar"%>
-            <% end %>
-          </div>
-        </div>
+  <% @posts.each do |post| %>
+    <div class="mini-card">
+      <div class="inside-card">
+        <%= link_to account_post_path(post) do %>
+          <h3><%= post.title %></h3>
+          <p><%= post.subtitle %></p>
+          <%= image_tag post.picture.url(:thumb), class: "avatar"%>
         <% end %>
+      </div>
+    </div>
+  <% end %>
+  <div class="new-card">
+    <a href=""><div class="new-inside-card">
+      <i class="plus-icon"></i>
+    </div></a>
+  </div>
 </div>
 
 <div class="form-wrapper inactive" id="layer3">
