@@ -7,7 +7,7 @@ class SubscribersController < ApplicationController
       flash[:alert] = "Merci d'avoir souscrit à notre newsletter!"
       redirect_to root_path
     else
-      flash[:alert] = "Vous avez déjà souscrit à notre newsletter!"
+      flash[:alert] = "Une erreur est survenue. Veuillez vérifier votre email!"
       redirect_to root_path
     end
   end

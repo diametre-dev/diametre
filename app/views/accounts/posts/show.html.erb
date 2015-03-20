@@ -1,7 +1,19 @@
 <div class="container">
   <div class="padded">
     <div class="box-form">
-      <h2><%= best_in_place @post, :title, url: account_post_path(@post), class: "edit-title" %></h2>
+      <%= link_to account_path do %>
+        <i class="fa fa-chevron-left back"></i>
+      <% end %>
+      <div class="trash-show">
+        <%= link_to account_post_path(@post), method: :delete, data: {confirm: "Are you sure?"} do %>
+          <i class="fa fa-times"></i>
+        <% end %>
+      </div>
+      <div class="title-padding">
+        <h2>
+          <%= best_in_place @post, :title, url: account_post_path(@post), class: "edit-title" %>
+        </h2>
+      </div>
       <p>
         <b>Sous-titre :</b>
         <%= best_in_place @post, :subtitle, url: account_post_path(@post), class: "edit-subtitle" %>

@@ -24,8 +24,10 @@
   </div>
   <div class="grow">
     <div class="gvignette" id="divsmall">
-      <h2>WHATEVER</h2>
-      <p></p>
+      <%= link_to locations_path do %>
+        <h2>LA CARTE</h2>
+      <% end %>
+<!--       <p></p> -->
     </div>
     <div class="gvignette" id="divbig">
       <h2>MINI EXPOSITION</h2>
@@ -38,8 +40,8 @@
   </div>
   <div class="grow">
     <div class="gvignette" id="divsmall">
-      <%= link_to locations_path do %>
-        <h2>MAP</h2>
+      <%= link_to page_path('about') do %>
+        <h2>Une association pour la jeune création</h2>
       <% end %>
       <!--<p>Nos recommandation culture à Paname</p>-->
     </div>
@@ -56,7 +58,9 @@
       </div>
     </div>
     <div class="gvignette" id="divbig">
-      <h2>BLOG</h2>
+      <%= link_to blog_path do %>
+        <h2>BLOG</h2>
+      <% end %>
       <!--<p>Le blog de l'association ;)</p>-->
     </div>
   </div>

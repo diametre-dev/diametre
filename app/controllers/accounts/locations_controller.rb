@@ -16,7 +16,7 @@ class Accounts::LocationsController < ApplicationController
   def destroy
     @location = Location.find(params[:id])
     @location.destroy
-    redirect_to locations_path
+    redirect_to account_path
   end
 
   private
