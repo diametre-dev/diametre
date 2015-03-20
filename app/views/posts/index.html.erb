@@ -4,7 +4,9 @@
     <div class="article">
       <h1><%= post.title %></h1>
       <h3><%= post.subtitle %></h3>
-      <%= image_tag post.picture.url(:medium) %>
+      <% if post.picture? %>
+        <%= image_tag post.picture.url(:medium) %>
+      <% end %>
       <p><%= post.description %></p>
     </div>
   </div>
