@@ -50,7 +50,7 @@
       <div class="subscribe-form hidden">
         <%= simple_form_for(Subscriber.new(), url: create_subscriber_path) do |f| %>
           <%= f.error_notification %>
-          <%= f.input :email, label: false %>
+          <%= f.input :email, label: false, placeholder: 'Email' %>
           <%= f.button :submit, "S'abonner", class: "submit-btn" %>
         <% end %>
       </div>
