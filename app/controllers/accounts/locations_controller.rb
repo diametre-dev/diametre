@@ -7,7 +7,7 @@ class Accounts::LocationsController < ApplicationController
     @location = Location.new(location_params)
     # authorize @post
     if @location.save
-      redirect_to locations_path
+      redirect_to account_path
     else
      render :new
     end
@@ -16,12 +16,12 @@ class Accounts::LocationsController < ApplicationController
   def destroy
     @location = Location.find(params[:id])
     @location.destroy
-    redirect_to locations_path
+    redirect_to account_path
   end
 
   private
 
   def location_params
-    params.require(:location).permit(:name, :address, :description)
+    params.require(:location).permit(:name, :address, :description, :link)
   end
 end
