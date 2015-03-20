@@ -1,4 +1,26 @@
-<div class="padded">
+<div class="form-wrapper">
+  <div class="post-form">
+     <h2 style="text-align: center">nous contacter</h2>
+     <div class="box-form" id="big-form">
+         <%= render 'contacts/form' %>
+     </div>
+  </div>
+</div>
+<div class="content-left">
+  <h2>Informations</h2>
+  <ul class="unstyled" style="padding:22px;">
+    <li>Vous pouvez nous contacter à l'adresse
+    <span>
+      <%= mail_to "diametre.development@gmail.com" do %>
+        contact@diametre.com
+      <% end %>
+    </span> ou via le formulaire sur cette même page.
+    </li>
+    <li>Vous pouvez trouver des informations sur l'association et ses membres <a href="/about">ICI</a></li>
+  </ul>
+</div>
+
+<!--<div class="padded">
   <div class="container">
     <div class="row">
       <%= render "shared/flashes" %>
@@ -8,13 +30,13 @@
         <div class="yellow-form">
           <h2>Nous contacter</h2>
           <div class="text-left">
-            <%= render 'contacts/form' %>
+
           </div>
         </div>
       </div>
       <div class="col-xs-12 col-sm-6">
         <div class="yellow-form">
-          <h2>Informations</h2>
+          <h2></h2>
           <ul class='list-unstyle contact-list'>
             <li>
               <%= mail_to "diametre.development@gmail.com" do %>
@@ -29,4 +51,4 @@
       </div>
     </div>
   </div>
-</div>
+</div>-->

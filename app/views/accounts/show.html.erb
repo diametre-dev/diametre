@@ -1,12 +1,12 @@
 
 <!-- RIGHT CONTENT BEGINS -->
-<div class="form-wrapper active" id="layer1">
+<div class="form-wrapper inactive" id="layer1">
   <div class="post-form">
     <%= render 'posts/form' %>
   </div>
 </div>
 
-<div class="form-wrapper inactive" id="layer2">
+<div class="form-wrapper active" id="layer2">
       <% @posts.each do |post| %>
         <div class="mini-card">
           <div class="inside-card">
@@ -29,7 +29,7 @@
 <div class="form-wrapper inactive" id="layer4">
   <h2 style="text-align: center">Vos lieux</h2>
   <% @locations.each do |location| %>
-    <div style=" position: relative; width: 90%; margin-left: auto; margin-right: auto; width: 30%; margin-bottom: 10px; border-style: solid; border-size: 2.5px; border-radius: 2.5px; border-color: #2A316D; font-size: 18px">
+    <div style="position: relative; width: 90%; margin-left: auto; margin-right: auto; width: 30%; margin-bottom: 10px; border-style: solid; border-size: 2.5px; border-radius: 2.5px; border-color: #2A316D; font-size: 18px">
       <p style="color: #2A316D; position: relative; margin-top: 10px; margin-bottom: 10px; margin-left: 10px">
         <%= location.name %> - <%= link_to account_location_path(location), method: :delete do %>
           <i class="fa fa-trash-o"></i>
@@ -46,10 +46,10 @@
   <h2>Bonjour 'nom de l'être humain à qui la machine s'adresse'</h2>
   <p>Que puis-je pour vous ?</p>
   <ul>
-    <li><a href="#" id="handler1">Créer une nouvelle publication</a></li>
-    <li><a href="#" id="handler2">Voir mes publications</a></li>
-    <li><a href="#" id="handler3">Créer un lieu</a></li>
-    <li><a href="#" id="handler4">Voir les lieux</a></li>
+    <li><a href="#1" id="handler2">Voir mes publications</a></li>
+    <li><a href="#2" id="handler1">Créer une nouvelle publication</a></li>
+    <li><a href="#3" id="handler4">Voir les lieux</a></li>
+    <li><a href="#4" id="handler3">Créer un lieu</a></li>
   </ul>
 </div>
 <!-- LEFT CONTENT ENDS -->
