@@ -12,9 +12,11 @@ class Accounts::PostsController < ApplicationController
     @post = Post.new(post_params)
     # authorize @post
     if @post.save
-      redirect_to account_posts_path
+      flash[:alert] = "Votre article a bien été sauvegardé."
+      redirect_to account_path
     else
-     render :new
+      flash[:alert] = "Une erreur est survenue. Votre article n'a pas été sauvegardé."
+      render :new
     end
   end
 
@@ -30,7 +32,7 @@ class Accounts::PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_to account_posts_path
+    redirect_to account_path
   end
 
   private
