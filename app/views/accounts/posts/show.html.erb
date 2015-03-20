@@ -1,24 +1,24 @@
 <div class="container">
   <div class="padded">
     <div class="box-form">
-      <h1><%= best_in_place @post, :title, url: account_post_path(@post) %></h1>
+      <h2><%= best_in_place @post, :title, url: account_post_path(@post), class: "edit-title" %></h2>
       <p>
         <b>Sous-titre :</b>
-        <%= best_in_place @post, :subtitle, url: account_post_path(@post) %>
+        <%= best_in_place @post, :subtitle, url: account_post_path(@post), class: "edit-subtitle" %>
       </p>
       <p>
         <b>Description:</b>
-        <%= best_in_place @post, :description, url: account_post_path(@post) %>
+        <%= best_in_place @post, :description, url: account_post_path(@post), class: "edit-description", :as => :textarea %>
       </p>
       <p>
         <b>Auteur:</b>
-        <%= best_in_place @post, :author, url: account_post_path(@post) %>
+        <%= best_in_place @post, :author, url: account_post_path(@post), class: "edit-author" %>
       </p>
 
       <%= image_tag @post.picture.url(:medium) %>
       <%= simple_form_for(@post, html: {multipart: true}, url: update_picture_path(@post), method: :put) do |f| %>
         <%= f.input :picture, label: "Photo" %>
-        <%= f.submit "Editer la photo" %>
+        <%= f.submit "Editer la photo",  class: "btn submit-btn" %>
       <% end %>
     </div>
   </div>

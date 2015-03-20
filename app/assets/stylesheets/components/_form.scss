@@ -2,6 +2,27 @@
  * You killer form SASS module
  * ------------------------------------- */
 
+.edit-title {
+  input {
+    width: 70%;
+  }
+}
+
+.edit-subtitle {
+  input {
+   width: 100%;
+  }
+}
+
+.edit-description {
+  textarea {
+    width: 100%;
+    height: auto;
+    overflow: scroll;
+  }
+}
+
+
 .location_description {
   min-height: 200px;
   margin-bottom: 15px;
@@ -12,6 +33,14 @@
    max-height: 200px;
    font-size: 11px;
    color: #2A316D;
+  }
+  textarea {
+    height: 200px;
+    position: relative;
+    width: 100%;
+    max-height: 200px;
+    font-size: 11px;
+    color: #2A316D;
   }
 }
 
@@ -128,6 +157,12 @@
   }
   label {
     color: #2A316D;
+  }
+  p {
+    color: #2A316D;
+  }
+  img {
+    margin-bottom: 15px;
   }
  }
 
