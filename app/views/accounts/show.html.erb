@@ -13,12 +13,19 @@
         <%= link_to account_post_path(post) do %>
           <h3><%= post.title %></h3>
           <p><%= post.subtitle %></p>
-          <%= image_tag post.picture.url(:thumb), class: "avatar"%>
+          <% if post.picture? %>
+            <%= image_tag post.picture.url(:thumb), class: "avatar"%>
+          <% end %>
         <% end %>
+        <div class="trash text-center">
+          <%= link_to account_post_path(post), method: :delete, data: {confirm: "Are you sure?"} do %>
+            <i class="fa fa-times"></i>
+          <% end %>
+        </div>
       </div>
     </div>
   <% end %>
-  <div class="new-card">
+    <div class="new-card">
     <a href=""><div class="new-inside-card">
       <i class="plus-icon"></i>
     </div></a>
@@ -37,7 +44,7 @@
     <div style="position: relative; width: 90%; margin-left: auto; margin-right: auto; width: 30%; margin-bottom: 10px; border-style: solid; border-size: 2.5px; border-radius: 2.5px; border-color: #2A316D; font-size: 18px">
       <p style="color: #2A316D; position: relative; margin-top: 10px; margin-bottom: 10px; margin-left: 10px">
         <%= location.name %> - <%= link_to account_location_path(location), method: :delete do %>
-          <i class="fa fa-trash-o"></i>
+          <i class="fa fa-times"></i>
         <% end %>
       </p>
     </div>
@@ -48,8 +55,8 @@
 
 <!-- LEFT CONTENT BEGINS -->
 <div class="content-left">
-  <h2>Bonjour 'nom de l'être humain à qui la machine s'adresse'</h2>
-  <p>Que puis-je pour vous ?</p>
+  <h2>Bonjour <%= current_user.name %></h2>
+  <br>
   <ul>
     <li><a href="#1" id="handler2">Voir mes publications</a></li>
     <li><a href="#2" id="handler1">Créer une nouvelle publication</a></li>

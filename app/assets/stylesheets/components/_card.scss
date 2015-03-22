@@ -86,6 +86,26 @@ i.plus-icon {
   }
 }
 
+.title-padding {
+  padding-top: 20px;
+}
+
+.trash {
+  bottom: 15px;
+  right: 15px;
+  position: absolute;
+}
+
+.trash-show {
+  float:right;
+  clear: all;
+}
+
+.back {
+  float:left;
+  clear: all;
+}
+
 @media screen and (max-width: 900px) {
   .mini-card {
     min-width: 50%;

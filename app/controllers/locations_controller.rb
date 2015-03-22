@@ -7,7 +7,7 @@ class LocationsController < ApplicationController
       marker.lat location.latitude
       marker.lng location.longitude
       marker.title location.name
-      marker.infowindow ( "<div class='map-infowindow'>" + "<div class='map-infowindow-header'>" + "<strong>" + location.name.upcase + "</strong>" + "<br>" + "</div>" + "<em>" + location.address + "</em>" + "<div class='map-infowindow-body'>" + location.description + "</div>" + "</div>")
+      marker.infowindow ( "<div class='map-infowindow'>" + "<div class='map-infowindow-header'>" + "<strong>" + '<a href="http://' + location.link + '" target="_blank" >' + location.name.upcase + "</a>" + "</strong>" + "<br>" + "</div>" + "<em>" + location.address + "</em>" + "<div class='map-infowindow-body'>" + location.description + "</div>" + "</div>")
     end
   end
 end
