@@ -1,8 +1,8 @@
 class AccountsController < ApplicationController
   def show
-    @location = Location.new()
+    @location = Location.new
     @locations = Location.all
-    @post = Post.new()
+    @post = Post.new
     @posts = Post.all
   end
 

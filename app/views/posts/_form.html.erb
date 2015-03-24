@@ -5,12 +5,27 @@
       <%= f.error_notification %>
 
       <%#= f.association :tag?, as: :select, label_method: :name, label: false, placeholder: "Type the name of the tag" %> <!-- PEUT SERVIR POUR LES TAGS -->
-      <%= f.input :title %>
-      <%= f.input :subtitle %>
+      <%= f.input :title, label: 'Titre' %>
+      <%= f.input :subtitle, label: 'Sous-titre' %>
       <%= f.input :description %>
-      <%= f.input :picture %> <!-- TODO Add a drag and drop ??? -->
-      <%= f.input :author %>
-      <%= f.button :submit, class: "submit-btn" %>
+<!--       PREVIOUS FORM TO UPLOAD PICTURES -->
+      <%#= f.input :picture %> <!-- TODO Add a drag and drop ??? -->
+      <%#= f.simple_fields_for :post_pictures do |p| %>
+        <%#= p.input :picture %>
+        <%#= p.input :_destroy, as: :boolean, label: 'Supprimer la photo' %>
+      <%# end %>
+      <!-- c'est tjrs celle qu'on peut voir sur le site -->
+      <%= f.simple_fields_for :post_pictures do |picture| %>
+        <%= render 'posts/post_pictures_fields', f: picture %>
+      <% end %>
+<!--       if we want to see the pictures while uploading: go this link and follow tutorial
+      la docu de la gem: https://github.com/nathanvda/cocoon
+      http://www.liooo.engineer/blog/2014/11/22/building-multiple-file-upload-form-in-rails-way/ -->
+      <div class="links">
+        <%= link_to_add_association 'Ajouter une photo', f, :post_pictures, partial: 'accounts/posts/post_pictures_fields' %>
+      </div>
+      <%= f.input :author, label: 'Auteur' %>
+      <%= f.button :submit, 'Créer', class: "submit-btn" %>
     <% end %>
 </div>
 

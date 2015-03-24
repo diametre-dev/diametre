@@ -25,7 +25,9 @@
     <!--- TEAM TEAM TEAM -->
     <% Member.all.each do |member| %>
       <div class="team-card">
-        <%= image_tag member.picture.url(:medium) %>
+        <% if member.picture? %>
+          <%= image_tag member.picture.url(:medium) %>
+        <% end %>
         <h3><%= member.name %>, <%= member.job %></h3>
         <p><%= member.description %></p>
       </div>

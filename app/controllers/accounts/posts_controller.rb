@@ -38,7 +38,7 @@ class Accounts::PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :subtitle, :description, :picture, :author)
+    params.require(:post).permit(:title, :subtitle, :description, :picture, :author, post_pictures_attributes: [:id, :picture, :_destroy])
   end
 
   def post_picture_param
