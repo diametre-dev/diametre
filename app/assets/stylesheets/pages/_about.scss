@@ -107,8 +107,8 @@
 /* TEAM MEMBER */
 
 .team-card {
-  max-width: 33.33%;
-  min-width: 33.33%;
+  max-width: 50%;
+  min-width: 50%;
   min-height: 400px;
   background-color: rgb(239, 239, 239);
   height: auto;
@@ -124,7 +124,6 @@
     left: 50%;
     width:200px;
     height:200px;
-    border-radius: 100%;
     padding: 10px;
   }
   p {
