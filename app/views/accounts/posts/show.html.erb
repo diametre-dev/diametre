@@ -32,6 +32,14 @@
         <%= f.input :picture, label: "Photo" %>
         <%= f.submit "Editer la photo",  class: "btn submit-btn" %>
       <% end %>
+<!-- TO DO :
+INCORPORER LELEMENT PR EDITER PLUSIEURS PHOTOS
+      <%#= f.fields_for :post_pictures do |picture| %>
+        <%#= render 'posts/post_pictures_fields', f: picture %>
+      <%# end %>
+      <div class="links">
+        <%#= link_to_add_association 'Ajouter une photo', f, :post_pictures, partial: 'accounts/posts/post_pictures_fields' %>
+      </div> -->
     </div>
   </div>
 </div>

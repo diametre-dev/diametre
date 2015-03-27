@@ -13,6 +13,8 @@ gem "devise"
 gem "pundit"
 gem "paperclip"
 gem "aws-sdk", "< 2.0"
+#for the nested form
+gem "cocoon"
 
 gem "jquery-rails"
 gem "sass-rails", "~> 5.0"
