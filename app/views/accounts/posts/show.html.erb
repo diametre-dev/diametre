@@ -20,7 +20,8 @@
       </p>
       <p>
         <b>Description:</b>
-        <%= best_in_place @post, :description, url: account_post_path(@post), class: "edit-description", :as => :textarea %>
+<!--         TO DO: better updating method, pb with the refresh
+ -->        <%= best_in_place @post, :description, url: account_post_path(@post), class: "edit-description", :as => :textarea, display_with: :simple_format %>
       </p>
       <p>
         <b>Auteur:</b>

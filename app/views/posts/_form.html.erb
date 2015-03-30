@@ -7,7 +7,7 @@
       <%#= f.association :tag?, as: :select, label_method: :name, label: false, placeholder: "Type the name of the tag" %> <!-- PEUT SERVIR POUR LES TAGS -->
       <%= f.input :title, label: 'Titre' %>
       <%= f.input :subtitle, label: 'Sous-titre' %>
-      <%= f.input :description %>
+      <%= f.input :description, as: :text %>
 <!--       PREVIOUS FORM TO UPLOAD PICTURES -->
       <%#= f.input :picture %> <!-- TODO Add a drag and drop ??? -->
       <%#= f.simple_fields_for :post_pictures do |p| %>
